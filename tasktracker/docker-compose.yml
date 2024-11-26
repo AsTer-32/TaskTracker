@@ -1,0 +1,22 @@
+services:
+  db:
+    image: postgres:14
+    environment:
+      POSTGRES_DB: tasktracker
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: parol0988
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/tasktracker
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:
