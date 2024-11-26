@@ -25,12 +25,9 @@ Backend для упрощенной системы управления зада
 
 ## Установка
 
-1. Клонируйте репозиторий:
-   ```sh
-   git clone https://github.com/yourusername/yourrepository.git
-   cd yourrepository
+1. Клонируйте репозиторий
    
-2. Создайте виртуальное окружение и активируйте его
+2. Создайте виртуальное окружение и активируйте его:
     ```sh
     python -m venv venv
     .venv/Scripts/activate
@@ -89,9 +86,10 @@ Backend для упрощенной системы управления зада
     http://127.0.0.1:8000/token/verify/
     http://127.0.0.1:8000/auth/users/
     http://127.0.0.1:8000/auth/token/login/
-    http://127.0.0.1:8000/api/v1/commentlist/<int:pk>/
+    http://127.0.0.1:8000/api/v1/commentlist/
     http://127.0.0.1:8000/api/v1/comment/<int:pk>/
     http://127.0.0.1:8000/api/v1/commentdelete/<int:pk>/
+    http://127.0.0.1:8000/swagger/
 ```
 # Разработка
 
@@ -146,10 +144,6 @@ services:
 volumes:
   postgres_data:
 ```
-
-# Контакты
-
-Если у вас есть вопросы или предложения, свяжитесь с нами по адресу email@example.com
 
 
 
